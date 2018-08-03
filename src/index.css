@@ -1,5 +1,100 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: sans-serif;
+  font: 110%/1.5 arial;
+  letter-spacing: -1px;
+}
+
+h2 {
+  letter-spacing: -2px;
+}
+h3 {
+  letter-spacing: -1px;
+}
+
+img {
+  width: 100%;
+}
+
+dl,
+dt {
+  line-height: 1.2;
+}
+
+dt {
+  font-weight: bold;
+}
+
+dt::after {
+  content: ':';
+}
+
+dd {
+  margin: 0;
+  padding: 0 0 0.5em 0;
+}
+
+button {
+  font-size: inherit;
+}
+
+@media only screen and (min-width: 640px) {
+  body {
+    font-size: 120%;
+  }
+}
+
+@media only screen and (min-width: 720px) {
+  body {
+    font-size: 125%;
+  }
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+.row {
+  max-width: 1000px;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+/* Clearfix */
+.row::before,
+.row::after {
+  display: table;
+  content: '';
+}
+
+.row::after {
+  clear: both;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  float: left;
+
+  padding-left: 1.04166666%;
+  padding-right: 1.04166666%;
+}
+
+.col-3, .col-4, .col-6, .col-12 {
+  width: 100%;
+}
+
+@media only screen and (min-width: 640px) {
+  .col-3 {
+    width: 25%;
+  }
+
+  .col-4 {
+    width: 33.333333%;
+    width: calc(100%/3);
+  }
+
+  .col-6 {
+    width: 50%;
+  }
+
+  .col-12 {
+    width: 100%;
+  }
 }
